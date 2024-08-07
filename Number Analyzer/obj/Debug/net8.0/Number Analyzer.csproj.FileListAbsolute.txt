@@ -12,3 +12,4 @@ C:\Users\Test User\source\repos\Number Analyzer\Number Analyzer\obj\Debug\net8.0
 C:\Users\Test User\source\repos\Number Analyzer\Number Analyzer\obj\Debug\net8.0\Number Analyzer.pdb
 C:\Users\Test User\source\repos\Number Analyzer\Number Analyzer\obj\Debug\net8.0\Number Analyzer.genruntimeconfig.cache
 C:\Users\Test User\source\repos\Number Analyzer\Number Analyzer\obj\Debug\net8.0\ref\Number Analyzer.dll
+C:\Users\Test User\source\repos\Number Analyzer\Number Analyzer\obj\Debug\net8.0\Number Analyzer.sourcelink.json

@@ -23,6 +23,8 @@ Challenge:
 1 Point: Add validation to guarantee that a user enters a positive integer between 1 and 100.
  */
 
+using System.ComponentModel.Design;
+
 Console.WriteLine("Welcome to Analyze This! -the Number Analyzer app!");
 Console.WriteLine();
 
@@ -36,70 +38,71 @@ Console.WriteLine();
 bool runProgram = true;
 while (runProgram)
 {
-    Console.WriteLine("Please enter a number between 1 and 100.");
+    Console.WriteLine($"{name}, please choose a number between 1-100");
     int axies = int.Parse(Console.ReadLine());
+
     Console.WriteLine();
-
-    if (axies % 2 == 0 && axies > 0)
-    {
-        if (axies <= 24 && axies >= 2)
+        if (axies % 2 == 0 && axies > 0)
         {
-            Console.WriteLine("Even and less than 25.");
-            Console.WriteLine();
+            if (axies <= 24 && axies >= 2)
+            {
+                Console.WriteLine("Even and less than 25.");
+                Console.WriteLine();
+            }
+            if (axies > 26 && axies <= 60)
+            {
+                Console.WriteLine("Even and between 26 and 60 inclusive.");
+                Console.WriteLine();
+            }
+            if (axies > 60)
+            {
+                Console.WriteLine("Even and greater than 60");
+                Console.WriteLine();
+            }
         }
-        if (axies > 26 && axies <= 60)
+        else if (axies % 2 != 0 && axies <= 100 && axies > 0)
         {
-            Console.WriteLine("Even and between 26 and 60 inclusive.");
-            Console.WriteLine();
-        }
-        if (axies > 60)
-        {
-            Console.WriteLine("Even and greater than 60");
-            Console.WriteLine();
-        }
-    }
-    else if (axies % 2 != 0 && axies <= 100 && axies > 0)
-    {
-        if (axies <= 59)
-        {
-            Console.WriteLine("Odd and less than 60.");
-            Console.WriteLine();
-        }
-        if (axies > 60)
-        {
-            Console.WriteLine("Odd and greater than 60.");
-            Console.WriteLine();
-        }
-    }
-    else if (axies > 100 || axies <= 0)
-    {
-        Console.WriteLine("Please enter a valid number.");
-        Console.WriteLine();
-    }
-
-    bool answer = true;
-    while (answer = true)
-    {
-        Console.WriteLine($"Would you like to enter another number, {name}? y/n");
-        string again = Console.ReadLine();
-        Console.WriteLine();
-
-        if (again == "y")
-        {
-            runProgram = true;
-            break;
-        }
-        else if (again == "n")
-        {
-            Console.WriteLine($"Goodbye {name}.");
-            runProgram = false;
-            break;
+            if (axies <= 59)
+            {
+                Console.WriteLine("Odd and less than 60.");
+                Console.WriteLine();
+            }
+            if (axies > 60)
+            {
+                Console.WriteLine("Odd and greater than 60.");
+                Console.WriteLine();
+            }
         }
         else
         {
-            Console.WriteLine("Invalid selection, you donk.");
+            Console.WriteLine($" {name} Please enter a valid number.");
             Console.WriteLine();
-            continue;
         }
-    }
+
+
+        bool answer = true;
+        while (answer = true)
+        {
+            Console.WriteLine($"Would you like to enter another number, {name}? y/n");
+            string again = Console.ReadLine();
+            Console.WriteLine();
+
+            if (again == "y")
+            {
+                runProgram = true;
+                break;
+            }
+            else if (again == "n")
+            {
+                Console.WriteLine($"Goodbye {name}.");
+                runProgram = false;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid selection, you donk.");
+                Console.WriteLine();
+                continue;
+            }
+        }
 }
